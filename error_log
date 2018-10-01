@@ -1,0 +1,6 @@
+[27-Sep-2018 17:53:44 Europe/Moscow] PHP Notice:  Undefined index: PictureCode in /home/lirizjew/public_html/AfterPurchase.php on line 53
+[27-Sep-2018 17:53:44 Europe/Moscow] PHP Notice:  Undefined index: PaymentAmount in /home/lirizjew/public_html/AfterPurchase.php on line 54
+[27-Sep-2018 22:55:47 Europe/Moscow] PHP Notice:  Undefined index: PictureCode in /home/lirizjew/public_html/AfterPurchase.php on line 53
+[27-Sep-2018 22:55:47 Europe/Moscow] PHP Notice:  Undefined index: PaymentAmount in /home/lirizjew/public_html/AfterPurchase.php on line 54
+[27-Sep-2018 22:59:43 Europe/Moscow] PHP Notice:  Undefined index: PictureCode in /home/lirizjew/public_html/AfterPurchase.php on line 53
+[27-Sep-2018 22:59:43 Europe/Moscow] PHP Notice:  Undefined index: PaymentAmount in /home/lirizjew/public_html/AfterPurchase.php on line 54
