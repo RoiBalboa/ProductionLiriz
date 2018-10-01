@@ -177,7 +177,14 @@
 
         function onChangeDelivery(){
             alert("שים לב המחיר השתנה בעקבות שינוי בתנאי המשלוח");
-            document.getElementById("PriceH").innerText = "מחיר הרכישה הוא: " + String(getCurrentPrice()) + "₪";
+            var dropbox = document.getElementById("DeliveryDropBox");
+            if (dropbox.value == "Delivery")
+            {
+                document.getElementById("PriceH").innerText = "מחיר הרכישה הוא: " + String(getPrice(c)) + "₪ + " + "10₪ משלוח" ;
+            }
+            else{
+                document.getElementById("PriceH").innerText = "מחיר הרכישה הוא: " + String(getPrice(c)) + "₪";
+            }
         }
     </script>
     
