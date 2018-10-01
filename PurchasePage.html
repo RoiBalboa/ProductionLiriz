@@ -27,6 +27,11 @@
         <input type="text" name="Name" id="nameInputSpace" placeholder="הכנס שם מלא" />
         <h2 id="PriceH"></h2>
         </br>
+        <select onchange="onChangeDelivery()" id="DeliveryDropBox">
+            <option value="Pickup">איסוף עצמי</option>
+            <option value="Delivery">משלוח דואר 24 שעות</option>
+        </select>
+        <br>
         <input type="submit" id="subid" name="mysubmitbutton" style="visibility:hidden;" />
         <input type="text" name ="PictureCode" id="pictureInputCode" style="visibility: hidden;"/>
         <input type="text" name ="PaymentAmount" id="paymentAmountCode" style="visibility: hidden;"/>
@@ -126,13 +131,13 @@
             payment: function(data, actions) {
 
                 // Make a client-side call to the REST api to create the payment
-
                 return actions.payment.create({
                     payment: {
                         transactions: [
                             {
                                 amount: {
-                                    total: getPrice(c),
+                                    
+                                    total: getCurrentPrice(),
                                     currency: 'ILS'
                                 }
                             }
@@ -156,6 +161,24 @@
 
         }, '#paypal-button-container');
 
+        function getCurrentPrice(){
+            var dropbox = document.getElementById("DeliveryDropBox");
+            var currentPrice;
+            if (dropbox.value == "Delivery")
+            {
+                currentPrice = String(parseInt(getPrice(c)) + 10);
+            }
+            else
+            {
+                currentPrice = getPrice(c);
+            }
+            return currentPrice;
+        }
+
+        function onChangeDelivery(){
+            alert("שים לב המחיר השתנה בעקבות שינוי בתנאי המשלוח");
+            document.getElementById("PriceH").innerText = "מחיר הרכישה הוא: " + String(getCurrentPrice()) + "₪";
+        }
     </script>
     
     <script>
