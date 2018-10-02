@@ -15,24 +15,25 @@
     </br>
 
     <form id="detailsForm" action="AfterPurchase.php" method="post">
+        <h2>שם מלא</h2>
+        <input type="text" name="Name" id="nameInputSpace" placeholder="הכנס שם מלא" />
+        <h2>מספר טלפון</h2>
+        <input type="text" name="Phone" id="phoneInputSpace" placeholder="מספר טלפון נייד" />
         <h2>Email</h2>
         <input type="text" name="Email" id="emailInputSpace" placeholder="אימייל" />
         <h2>כתובת למשלוח</h2>
         <input type="text" name="Address" id="addressInputSpace" placeholder="כתובת משלוח מלאה" />
-        <h2>מספר טלפון</h2>
-        <input type="text" name="Phone" id="phoneInputSpace" placeholder="מספר טלפון נייד" />
         <h2>מיקוד</h2>
         <input type="text" name="Mikod" id="mikodInputSpace" placeholder="הכנס מיקוד" />
-        <h2>שם מלא</h2>
-        <input type="text" name="Name" id="nameInputSpace" placeholder="הכנס שם מלא" />
-        <h2 id="PriceH"></h2>
-        </br>
-        <select onchange="onChangeDelivery()" id="DeliveryDropBox">
+        <h2>משלוח</h2>
+        <select onchange="onChangeDelivery()" id="DeliveryDropBox" style="width:165px;" dir="rtl">
+            <option value="FillIn"></option>
             <option value="Pickup">איסוף עצמי</option>
             <option value="Delivery">משלוח דואר 24 שעות</option>
         </select>
-        <br>
+        <h2 id="PriceH"></h2>
         <input type="submit" id="subid" name="mysubmitbutton" style="visibility:hidden;" />
+        <input type="text" id="deliveryType" name="deliveryTypeInput" style="visibility:hidden;" />
         <input type="text" name ="PictureCode" id="pictureInputCode" style="visibility: hidden;"/>
         <input type="text" name ="PaymentAmount" id="paymentAmountCode" style="visibility: hidden;"/>
     </form>
@@ -54,6 +55,7 @@
             var addressInput = document.getElementById("addressInputSpace");
             var mikodInput = document.getElementById("mikodInputSpace");
             var nameInput = document.getElementById("nameInputSpace");
+            var deliveryInput = document.getElementById("DeliveryDropBox");
 
             if (emailInput.value === ""){
                 return false;
@@ -75,6 +77,10 @@
                 return false;
             }
 
+            if (deliveryInput.value === "FillIn"){
+                return false;
+            }
+
             return true;
         }
 
@@ -84,6 +90,7 @@
             document.querySelector('#addressInputSpace').addEventListener('change', handler);
             document.querySelector('#mikodInputSpace').addEventListener('change', handler);
             document.querySelector('#nameInputSpace').addEventListener('change', handler);
+            document.querySelector('#DeliveryDropBox').addEventListener('change', handler);
         }
 
         function toggleButton(actions) {
@@ -176,7 +183,6 @@
         }
 
         function onChangeDelivery(){
-            alert("שים לב המחיר השתנה בעקבות שינוי בתנאי המשלוח");
             var dropbox = document.getElementById("DeliveryDropBox");
             if (dropbox.value == "Delivery")
             {

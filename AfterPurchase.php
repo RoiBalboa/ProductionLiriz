@@ -53,12 +53,14 @@
     $pictureCode = $_POST["PictureCode"];
     $paymentAmount = $_POST["PaymentAmount"];
     $name = $_POST["Name"];
+    $deliveryType = $_POST["deliveryType"];
     $txt .= "כתובת:" . $address . "\n";
     $txt .= "מספר טלפון:" . $phone . "\n";
     $txt .= "מיקוד:" . $mikod . "\n";
     $txt .= "שם מלא:" . $name . "\n";
     $txt .= "מזהה שרשרת: " . $pictureCode . "\n";
     $txt .= "סכום חיוב: " .$paymentAmount . " שקלים \n";
+    $txt .= "דרך משלוח: " . $deliveryType . "\n";
     $txt .= "אם הפרטים לא נכונים יש לשלוח מייל אל - lirizjewelry@gmail.com עד 12 שעות מזמן הקנייה.\n";
     $txt .= "לפניות טכניות : 0527345543\n";
     $txt .= "לפניות בנוגע למוצרים : 0546641822\n";
