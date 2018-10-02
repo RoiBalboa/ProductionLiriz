@@ -32,8 +32,8 @@
             <option value="Delivery">משלוח דואר 24 שעות</option>
         </select>
         <h2 id="PriceH"></h2>
-        <input type="submit" id="subid" name="mysubmitbutton" style="visibility:hidden;" />
-        <input type="text" id="deliveryType" name="deliveryTypeInput" style="visibility:hidden;" />
+        <input type="submit" name="mysubmitbutton" id="subid" style="visibility:hidden;" />
+        <input type="text" name="deliveryTypeInput" id="deliveryType" style="visibility:hidden;" />
         <input type="text" name ="PictureCode" id="pictureInputCode" style="visibility: hidden;"/>
         <input type="text" name ="PaymentAmount" id="paymentAmountCode" style="visibility: hidden;"/>
     </form>
@@ -184,12 +184,15 @@
 
         function onChangeDelivery(){
             var dropbox = document.getElementById("DeliveryDropBox");
+            var deliveryTypeInputVar = document.getElementById("deliveryType");
             if (dropbox.value == "Delivery")
             {
                 document.getElementById("PriceH").innerText = "מחיר הרכישה הוא: " + String(getPrice(c)) + "₪ + " + "10₪ משלוח" ;
+                deliveryTypeInputVar.value = "משלוח דואר 24 שעות";
             }
             else{
                 document.getElementById("PriceH").innerText = "מחיר הרכישה הוא: " + String(getPrice(c)) + "₪";
+                deliveryTypeInputVar.value = "איסוף עצמי";
             }
         }
     </script>
