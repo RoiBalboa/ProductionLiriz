@@ -53,7 +53,7 @@
     $pictureCode = $_POST["PictureCode"];
     $paymentAmount = $_POST["PaymentAmount"];
     $name = $_POST["Name"];
-    $deliveryType = $_POST["deliveryType"];
+    $deliveryType = $_POST["deliveryTypeInput"];
     $txt .= "כתובת:" . $address . "\n";
     $txt .= "מספר טלפון:" . $phone . "\n";
     $txt .= "מיקוד:" . $mikod . "\n";
