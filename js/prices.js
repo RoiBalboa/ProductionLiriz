@@ -1,8 +1,8 @@
 function getPrice(imgId){
     var twentyfives = ['6', '7', '8', '9', '12', '13', '14', '17'];
     var thirtyies = ['4', '10', '11', '16', '19'];
-    var thirtyfives = ['3', '5', '15', '18'];
-    var fourties = ['1', '2'];
+    var thirtyfives = ['3', '5', '15', '18', '21', '22', '24'];
+    var fourties = ['1', '2', '20', '23'];
 
     if (twentyfives.indexOf(imgId) != -1)
     {
