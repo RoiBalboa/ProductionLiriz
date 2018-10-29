@@ -487,8 +487,6 @@
             document.getElementById("img" + String(i)).onclick = function() {
                 window.location.href = "/PurchasePage.html?imgid=" + String(this.id).substring(3,String(this.id).length);
             };
-
-            document.getElementById("phoneText" + String(i)).innerText = "מחיר - " + getPrice(i) + "שקל";
         }
         
     }
