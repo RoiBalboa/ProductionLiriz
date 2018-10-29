@@ -133,6 +133,90 @@
                 <ul class="grid cs-style-4">
                     <li>
                         <figure>
+                            <div><img src="images/gallery24.jpeg" id="img24" onclick="modalOnClick(this.id);" alt="image 2"></div>
+                            <figcaption>
+                                <small id="textImg24" style="font-weight: 500;color:white">₪מחיר 50 </small>
+                                <a href="/PurchasePage.html?imgid=24"s style="background-color:darkred">
+                                <img src="images/cart-black.png" style="width:35px; height:35px;" ></a>
+                            </figcaption>
+                        </figure>
+                    </li>
+                </ul>
+
+                <ul class="grid cs-style-4">
+                    <li>
+                        <figure>
+                            <div><img src="images/gallery23.jpeg" id="img23" onclick="modalOnClick(this.id);" alt="image 2"></div>
+                            <figcaption>
+                                <small id="textImg23" style="font-weight: 500;color:white">₪מחיר 50 </small>
+                                <a href="/PurchasePage.html?imgid=23" style="background-color:darkred">
+                                <img src="images/cart-black.png" style="width:35px; height:35px;" ></a>
+                            </figcaption>
+                        </figure>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="item">
+                <ul class="grid cs-style-4">
+                    <li>
+                        <figure>
+                            <div><img src="images/gallery22.jpeg" id="img22" onclick="modalOnClick(this.id);" alt="image 2"></div>
+                            <figcaption>
+                                <small id="textImg22" style="font-weight: 500;color:white">₪מחיר 50 </small>
+                                <a href="/PurchasePage.html?imgid=22"s style="background-color:darkred">
+                                <img src="images/cart-black.png" style="width:35px; height:35px;" ></a>
+                            </figcaption>
+                        </figure>
+                    </li>
+                </ul>
+
+                <ul class="grid cs-style-4">
+                    <li>
+                        <figure>
+                            <div><img src="images/gallery21.jpeg" id="img21" onclick="modalOnClick(this.id);" alt="image 2"></div>
+                            <figcaption>
+                                <small id="textImg21" style="font-weight: 500;color:white">₪מחיר 50 </small>
+                                <a href="/PurchasePage.html?imgid=21" style="background-color:darkred">
+                                <img src="images/cart-black.png" style="width:35px; height:35px;" ></a>
+                            </figcaption>
+                        </figure>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="item">
+                <ul class="grid cs-style-4">
+                    <li>
+                        <figure>
+                            <div><img src="images/gallery20.jpeg" id="img20" onclick="modalOnClick(this.id);" alt="image 2"></div>
+                            <figcaption>
+                                <small id="textImg20" style="font-weight: 500;color:white">₪מחיר 50 </small>
+                                <a href="/PurchasePage.html?imgid=20"s style="background-color:darkred">
+                                <img src="images/cart-black.png" style="width:35px; height:35px;" ></a>
+                            </figcaption>
+                        </figure>
+                    </li>
+                </ul>
+
+                <ul class="grid cs-style-4">
+                    <li>
+                        <figure>
+                            <div><img src="images/gallery19.jpeg" id="img19" onclick="modalOnClick(this.id);" alt="image 2"></div>
+                            <figcaption>
+                                <small id="textImg19" style="font-weight: 500;color:white">₪מחיר 50 </small>
+                                <a href="/PurchasePage.html?imgid=19" style="background-color:darkred">
+                                <img src="images/cart-black.png" style="width:35px; height:35px;" ></a>
+                            </figcaption>
+                        </figure>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="item">
+                <ul class="grid cs-style-4">
+                    <li>
+                        <figure>
                             <div><img src="images/gallery1.jpeg" id="img1" onclick="modalOnClick(this.id);" alt="image 2"></div>
                             <figcaption>
                                 <small id="textImg1" style="font-weight: 500;color:white">₪מחיר 50 </small>
@@ -380,21 +464,6 @@
                     </li>
                 </ul>
             </div>
-
-            <div class="item">
-                <ul class="grid cs-style-4">
-                    <li>
-                        <figure>
-                            <div><img src="images/gallery19.jpeg" id="img19" onclick="modalOnClick(this.id);" alt="image 2"></div>
-                            <figcaption>
-                                <small id="textImg19" style="font-weight: 500;color:white">₪מחיר 50 </small>
-                                <a href="/PurchasePage.html?imgid=19" style="background-color:darkred">
-                                <img src="images/cart-black.png" style="width:35px; height:35px;" ></a>
-                            </figcaption>
-                        </figure>
-                    </li>
-                </ul>
-            </div>
     </div>
   </div>
 </section>
@@ -402,7 +471,7 @@
 <script>
     //For mobile
     if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
-        var ImagesCount = 19;
+        var ImagesCount = 24;
         var i; 
         for (i = 1; i <= ImagesCount; i++){
             document.getElementById("img" + String(i)).onclick = function() {
@@ -447,7 +516,7 @@
         // set Prices
         (function(){
             var currentImg;
-            var ImagesCount = 19;
+            var ImagesCount = 24;
             var i = 1;
 
             for (i = 1; i <= ImagesCount; i++) {
