@@ -15,7 +15,7 @@
     </br>
 
     <form id="detailsForm" action="AfterPurchase.php" method="post">
-        <h2>שם מלא</h2>
+        <h2 style="color: blue">שם מלא</h2>
         <input type="text" name="Name" id="nameInputSpace" placeholder="הכנס שם מלא" />
         <h2>מספר טלפון</h2>
         <input type="text" name="Phone" id="phoneInputSpace" placeholder="מספר טלפון נייד" />
@@ -102,6 +102,14 @@
         paypal.Button.render({
             style: {
                 size: 'medium'
+            },
+            
+            funding: {
+                allowed: [
+                    paypal.FUNDING.CARD,
+                    paypal.FUNDING.CREDIT
+                ],
+                disallowed: []
             },
 
             // Set your environment
